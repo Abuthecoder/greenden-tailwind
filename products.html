@@ -13,27 +13,44 @@
     <!-- Responsive Navbar -->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="font-bold text-2xl">GREENDEN</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
         <ul class="flex gap-5 text-gray-600 hidden md:flex">
             <li>
-                <a href="#" class="hover:underline hover:text-black">Home</a>
+                <a href="index.html" class="hover:underline hover:text-black">Home</a>
             </li>
             <li>
                 <a href="products.html" class="hover:underline hover:text-black">Products</a>
             </li>
             <li>
-                <a href="#" class="hover:underline hover:text-black">Contact</a>
+                <a href="contact.html" class="hover:underline hover:text-black">Contact</a>
             </li>
         </ul>
     </nav>
+    <!-- side navbar -->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 right-0 transition-all duration-1000" style="width: 50%; height: 100vh; right:-50%;">
+        <div class="text-right p-5">
+            <p id="close-nav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li>
+                <a href="index.html" class="hover:underline hover:text-black">Home</a>
+            </li>
+            <li>
+                <a href="products.html" class="hover:underline hover:text-black">Products</a>
+            </li>
+            <li>
+                <a href="contact.html" class="hover:underline hover:text-black">Contact</a>
+            </li>
+        </ul>
+    </section>
     <!-- Product section -->
     <section class="p-4 text-center">
         <h1 class="font-bold text-3xl mt-10">Our Products</h1>
-        <input type="text" placeholder="Search a Product" class="border border-black p-3 mt-5" style="width: 80%;">
-        <div class="grid grid-cols-2 gap-5 md:grid-cols-4 mt-5">
+        <input type="text" placeholder="Search a Product" class="border border-black p-3 mt-5" style="width: 80%;" id="search">
+        <div id="Product-container" class="grid grid-cols-2 gap-5 md:grid-cols-4 mt-5">
             <div>
                 <img src="./images/bestseller_1.jpg"
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
@@ -43,13 +60,13 @@
             <div>
                 <img src="./images/bestseller_2.jpg"
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Rose Plant</p>
+                <p>Lily Plant</p>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/bestseller_3.jpg"
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Rose Plant</p>
+                <p>Sunflower Plant</p>
                 <p>$20</p>
             </div>
             <div>
@@ -73,13 +90,13 @@
             <div>
                 <img src="./images/bestseller_3.jpg"
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Rose Plant</p>
+                <p>Jasmine Plant</p>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/bestseller_4.jpg"
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Rose Plant</p>
+                <p>Leaf Plant</p>
                 <p>$20</p>
             </div>
         </div>
@@ -90,6 +107,7 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore temporibus commodi modi sunt. Nisi, nesciunt?</p>
         <P>&copy 2024 Greenden.com</P>
     </section>
+    <script src="products.js"></script>
 </body>
 
 </html>
